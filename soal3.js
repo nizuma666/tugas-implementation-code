@@ -3,7 +3,7 @@ const divideAndSort = (number) => {
   let getArr = getString.split("0");
   let sortNumber = getArr.map((x) => x.split("").sort().join(""));
   let finalNumber = sortNumber.join("");
-  console.log(finalNumber);
+  console.log(parseInt(finalNumber));
 };
 
-divideAndSort(5430987);
+divideAndSort(5340987);
