@@ -4,7 +4,7 @@ const reverseWord = (kalimat) => {
   console.log(`Kalimat awal          : ${kalimat}`);
   const changeToArray = kalimat.split(" ").reverse().join(" ");
   console.log(
-    `Hasil reverse kalimat : ${changeToArray} ${typeof changeToArray}\n`
+    `Hasil reverse kalimat : ${changeToArray}\n`
   );
 };
 //function cek palindrom

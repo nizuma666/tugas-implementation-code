@@ -30,7 +30,11 @@ const PijarFood = (totalBelanja, voucher, jarak, pajak) => {
 };
 const PotonganHarga = (totalBelanja, voucher) => {
   let potongan = 0;
-  if (totalBelanja >= 50000 && totalBelanja <= 100000) {
+  if(totalBelanja > 100000){
+    potongan = 50000
+    console.log(`!!Selamat anda mendapatkan diskon ${voucher}!!`);
+    return potongan;
+  }else if (totalBelanja >= 50000 && totalBelanja <= 100000) {
     potongan = (totalBelanja * 50) / 100;
     console.log(`!!Selamat anda mendapatkan diskon ${voucher}!!`);
     return potongan;
@@ -39,8 +43,8 @@ const PotonganHarga = (totalBelanja, voucher) => {
     console.log(`!!Selamat anda mendapatkan diskon ${voucher}!!`);
     return potongan;
   } else {
-    return totalBelanja;
+    return 0;
   }
 };
 
-PijarFood(30000, "DITRAKTIRPIJAR", 2, true);
+PijarFood(100000, "DITRAKTIRPIJAR", 2, true);
